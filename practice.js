@@ -40,7 +40,12 @@ var groceries= ["apples", "milk", "eggs", "bread"]
 //If the array does not contain "chocolate", add "chocolate".
 //doubleCheck should return the array. 
 
-//db checl
+function doubleCheck (array){
+    if (!array.includes("chocolate")){
+      array.push("chocolate")
+    }
+  return array
+}
 
 //////////////////PROBLEM 5////////////////////
 
@@ -84,11 +89,10 @@ var ruff= dog.bark();
  function looper (array){
    var mySum=0;
    for (var i = 0; i < array.length; i++){
-     if (array!=0){
-       if (array>=100){
-         mySum.push(i)
-       }
-     }
+      if (array[i]%2!=0||array[i]>=100){
+        mySum+=array[i]
+      }
+     
    }
    return mySum
 }
